@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "hubspot": {
+      "command": "node",
+      "args": ["ABSOLUTE_PATH/packages/hubspot/dist/cli.js"],
+      "env": {
+        "MCP_MODE": "sandbox"
+      }
+    },
+    "clickup": {
+      "command": "node",
+      "args": ["ABSOLUTE_PATH/packages/clickup/dist/cli.js"],
+      "env": {
+        "MCP_MODE": "sandbox"
+      }
+    },
+    "sheets": {
+      "command": "node",
+      "args": ["ABSOLUTE_PATH/packages/sheets/dist/cli.js"],
+      "env": {
+        "MCP_MODE": "sandbox"
+      }
+    },
+    "notion": {
+      "command": "node",
+      "args": ["ABSOLUTE_PATH/packages/notion/dist/cli.js"],
+      "env": {
+        "MCP_MODE": "sandbox"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm exec tsc -b --pretty false && node scripts/chmod-bins.mjs && pnpm --filter site build",
+  "outputDirectory": "site/dist",
+  "framework": null,
+  "rewrites": [{ "source": "/mcp", "destination": "/api/mcp" }],
+  "functions": {
+    "api/mcp.js": { "maxDuration": 10 },
+    "api/sandbox.js": { "maxDuration": 10 }
+  }
+}

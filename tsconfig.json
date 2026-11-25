@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/core" },
+    { "path": "packages/hubspot" },
+    { "path": "packages/clickup" },
+    { "path": "packages/sheets" },
+    { "path": "packages/notion" },
+    { "path": "packages/workflow" },
+    { "path": "packages/demo" },
+    { "path": "packages/hosted" }
+  ]
+}

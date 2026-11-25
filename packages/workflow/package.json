@@ -1,0 +1,56 @@
+{
+  "name": "@quvantic/mcp-workflow",
+  "version": "0.1.0",
+  "description": "Sandbox-ready workflow: HubSpot deal won, ClickUp onboarding tasks, Google Sheets log.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Mustafa (https://github.com/mustafaautomation)",
+  "homepage": "https://mcp-connectors.quvantic.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafaautomation/business-mcp-connectors.git",
+    "directory": "packages/workflow"
+  },
+  "bugs": {
+    "url": "https://github.com/mustafaautomation/business-mcp-connectors/issues"
+  },
+  "keywords": [
+    "mcp",
+    "hubspot",
+    "clickup",
+    "google-sheets"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "mcp-deal-won-onboarding": "./dist/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/cli.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepack": "pnpm build"
+  },
+  "dependencies": {
+    "@quvantic/mcp-clickup": "workspace:*",
+    "@quvantic/mcp-core": "workspace:*",
+    "@quvantic/mcp-hubspot": "workspace:*",
+    "@quvantic/mcp-sheets": "workspace:*"
+  }
+}

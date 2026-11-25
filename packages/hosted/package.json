@@ -1,0 +1,28 @@
+{
+  "name": "@quvantic/mcp-hosted",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Read-only sandbox MCP server over stateless Streamable HTTP for the public demo.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@quvantic/mcp-clickup": "workspace:*",
+    "@quvantic/mcp-core": "workspace:*",
+    "@quvantic/mcp-hubspot": "workspace:*",
+    "@quvantic/mcp-notion": "workspace:*",
+    "@quvantic/mcp-sheets": "workspace:*"
+  }
+}

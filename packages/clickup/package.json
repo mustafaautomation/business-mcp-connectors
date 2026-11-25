@@ -1,0 +1,54 @@
+{
+  "name": "@quvantic/mcp-clickup",
+  "version": "0.1.0",
+  "description": "MCP server for ClickUp lists, tasks, and comments. Sandbox fixtures or a personal API token.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Mustafa (https://github.com/mustafaautomation)",
+  "homepage": "https://mcp-connectors.quvantic.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafaautomation/business-mcp-connectors.git",
+    "directory": "packages/clickup"
+  },
+  "bugs": {
+    "url": "https://github.com/mustafaautomation/business-mcp-connectors/issues"
+  },
+  "keywords": [
+    "mcp",
+    "clickup",
+    "modelcontextprotocol"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "mcp-clickup": "./dist/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/cli.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepack": "pnpm build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@quvantic/mcp-core": "workspace:*",
+    "zod": "^3.25.76"
+  }
+}

@@ -1,0 +1,41 @@
+name: Bug
+description: A sandbox or live tool behaved differently than the README says.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: connector
+    attributes:
+      label: Connector
+      options:
+        - hubspot
+        - clickup
+        - sheets
+        - notion
+        - hosted sandbox
+        - workflow
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - sandbox
+        - live
+        - hosted /mcp
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: Do not paste access tokens, Authorization headers, or real customer records.
+    validations:
+      required: true

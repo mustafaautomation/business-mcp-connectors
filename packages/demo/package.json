@@ -1,0 +1,31 @@
+{
+  "name": "@quvantic/mcp-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "In-memory MCP client that walks the sandbox connectors and the deal-won workflow.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "mcp-connectors-demo": "./dist/cli.js"
+  },
+  "main": "./dist/demo.js",
+  "types": "./dist/demo.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/demo.d.ts",
+      "import": "./dist/demo.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/cli.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@quvantic/mcp-clickup": "workspace:*",
+    "@quvantic/mcp-core": "workspace:*",
+    "@quvantic/mcp-hubspot": "workspace:*",
+    "@quvantic/mcp-notion": "workspace:*",
+    "@quvantic/mcp-sheets": "workspace:*",
+    "@quvantic/mcp-workflow": "workspace:*"
+  }
+}

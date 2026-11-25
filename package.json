@@ -1,0 +1,33 @@
+{
+  "name": "business-mcp-connectors",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP servers for HubSpot, ClickUp, Google Sheets, and Notion. Portfolio demo by Mustafa.",
+  "type": "module",
+  "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -b && node scripts/chmod-bins.mjs && pnpm --filter site build",
+    "typecheck": "tsc -b --pretty false && pnpm --filter site typecheck",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "test": "vitest run",
+    "demo": "node packages/demo/dist/cli.js",
+    "workflow": "node packages/workflow/dist/cli.js",
+    "dev:site": "pnpm --filter site dev"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.8",
+    "@types/node": "^22.19.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

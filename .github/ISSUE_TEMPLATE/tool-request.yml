@@ -1,0 +1,39 @@
+name: Tool request
+description: Ask for another read or write on an existing connector.
+title: "[tool] "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: connector
+    attributes:
+      label: Connector
+      options:
+        - hubspot
+        - clickup
+        - sheets
+        - notion
+        - new connector
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Tool name
+      placeholder: search_deals
+    validations:
+      required: true
+  - type: dropdown
+    id: access
+    attributes:
+      label: Access
+      options:
+        - read
+        - write
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What the model should be able to do
+    validations:
+      required: true
